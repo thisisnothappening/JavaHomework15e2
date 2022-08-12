@@ -1,0 +1,18 @@
+Folositi TDD ca sa construiti PersonService. Creati teste si pentru Person astfel incat sa
+    nu poata fi creata o persoana fictiva (varsta invalida, nume null... ganditi-va si la alte cazuri)
+
+Avand obiectul Person(id, name, age) creati PersonService care ofera urmatorul behavior:
+
+Person addPerson(Person person) : persoana primita NU are ID, si se va genera dupa adaugare. Persoana returnata are id-ul setat
+
+Person removePerson(int id) : sterge persoana cu id-ul respectiv si o returneaza. Arunca exceptie (unchecked) daca nu exista
+
+List<Person> getAllPersons()
+
+List<Person> getPersonsOlderThan(int age): validati age-ul (pozitiv, <120)
+
+List<String> getAllPersonNames() - returneaza doar numele
+
+Person getPerson(String name)
+
+Person getPersonById(int id)
