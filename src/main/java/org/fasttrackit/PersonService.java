@@ -8,21 +8,16 @@ import java.util.NoSuchElementException;
 public class PersonService {
     private final List<Person> personList = new ArrayList<>();
     private final List<String> nameList = new ArrayList<>();
-    private int counter = 0;
+    private int id = 0;
 
-    public int getCounter() {
-        return counter;
-    }
-
-    public Person addPerson(Person person) {
-        if (nameList.contains(person.getName())) {
+    public Person addPerson(String name, int age) {
+        if (nameList.contains(name)) {
             throw new InvalidParameterException("Person already exists"); // I need this for getPerson(String name) to work as intended
         }
 
-        personList.add(person);
-        counter++;
-        nameList.add(person.getName());
-        return person;
+        personList.add(new Person(name, age, id++));
+        nameList.add(name);
+        return new Person(name, age, id);
     }
 
     public Person removePerson(int id) {

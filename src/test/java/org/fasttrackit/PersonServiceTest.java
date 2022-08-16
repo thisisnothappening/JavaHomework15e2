@@ -15,9 +15,9 @@ public class PersonServiceTest {
     @BeforeEach
     void setUp() {
         personService = new PersonService();
-        personService.addPerson(new Person("Mircea", 21, personService.getCounter()));
-        personService.addPerson(new Person("Marcel", 15, personService.getCounter()));
-        personService.addPerson(new Person("Marius", 29, personService.getCounter()));
+        personService.addPerson("Mircea", 21);
+        personService.addPerson("Marcel", 15);
+        personService.addPerson("Marius", 29);
     }
 
     @AfterEach
@@ -50,7 +50,7 @@ public class PersonServiceTest {
     void testAddPersonException() {
         boolean thrown = false;
         try {
-            personService.addPerson(new Person("Mircea", 38, personService.getCounter()));
+            personService.addPerson("Mircea", 38);
         } catch (InvalidParameterException e) {
             thrown = true;
         }

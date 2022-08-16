@@ -3,7 +3,7 @@ Folositi TDD ca sa construiti PersonService. Creati teste si pentru Person astfe
 
 Avand obiectul Person(id, name, age) creati PersonService care ofera urmatorul behavior:
 
-Person addPerson(Person person) : persoana primita NU are ID, si se va genera dupa adaugare. Persoana returnata are id-ul setat
+Person addPerson(String name, int age) : persoana primita NU are ID, si se va genera dupa adaugare. Persoana returnata are id-ul setat
 
 Person removePerson(int id) : sterge persoana cu id-ul respectiv si o returneaza. Arunca exceptie (unchecked) daca nu exista
 

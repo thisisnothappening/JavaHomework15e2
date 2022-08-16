@@ -5,13 +5,13 @@ public class Person {
     private final int age;
     private final int id;
 
-    public Person(String name, int age, int counter) {
+    public Person(String name, int age, int id) {
         if (name == null || age > 120 || age < 0) {
             throw new RuntimeException();
         }
         this.name = name;
         this.age = age;
-        this.id = counter;
+        this.id = id;
     }
 
     public String getName() {
